@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="heading_size">40sp</dimen>
+    <dimen name="logo_margin_top">120dp</dimen>
+    <dimen name="logo_margin_top_signup">70dp</dimen>
+    <dimen name="field_radius">16dp</dimen>
+    <dimen name="otp_box_margin">10dp</dimen>
+    <dimen name="otpbox_height">50dp</dimen>
+    <dimen name="sub_heading_size">30sp</dimen>
+    <dimen name="logo_home_margin">20sp</dimen>
+    <dimen name="logo_home_size">60dp</dimen>
+    <dimen name="logo_home_ms">10dp</dimen>
+    <dimen name="logo_home_mt">45dp</dimen>
+    <dimen name="home_heading">25sp</dimen>
+    <dimen name="table_margin_left">18dp</dimen>
+    <dimen name="dialog_margin_horizontal">10dp</dimen>
+    <dimen name="dialog_button_text_size">18sp</dimen>
+    <dimen name="dialog_button_margin_top">10dp</dimen>
+    <dimen name="dialog_field_margin_top">5dp</dimen>
+    <dimen name="icon_home_mt">35dp</dimen>
+    <dimen name="icom_home_ms">10dp</dimen>
+    <dimen name="home_btn_horizontal_padding">10dp</dimen>
+    <dimen name="login_signup_horizontal_margin">15dp</dimen>
+    <dimen name="home_margin_horizontal">10dp</dimen>
+    <dimen name="table_heading_horizontal_padding">5dp</dimen>
+    <dimen name="empty_list_notification">20dp</dimen>
+    <dimen name="empty_list_notification_margin_top">150dp</dimen>
+    <dimen name="logo_login_signup_size">50dp</dimen>
+
+</resources>

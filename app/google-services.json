@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "633160657753",
+    "project_id": "smdudhaar",
+    "storage_bucket": "smdudhaar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:633160657753:android:d7ad52cf165a18c2af3a48",
+        "android_client_info": {
+          "package_name": "com.example.smd_udhaar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOWLB5m-kmDyI98TQOSxIKtCYHWD8Vbw0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

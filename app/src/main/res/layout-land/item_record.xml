@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <!-- Borrower Name -->
+    <TextView
+        android:id="@+id/borrowerName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Borrower Name"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:backgroundTint="@color/dark_gold"
+        android:layout_weight="1"
+        />
+
+    <!-- Lender Name -->
+    <TextView
+        android:id="@+id/lenderName"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:text="Lender Name"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        />
+
+    <!-- Amount -->
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Amount"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        />
+
+    <!-- Date -->
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        />
+
+
+</LinearLayout>

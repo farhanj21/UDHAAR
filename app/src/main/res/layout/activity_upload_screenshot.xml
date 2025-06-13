@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UploadScreenshotActivity"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/tvLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/logo_home_ms"
+        android:layout_marginTop="@dimen/logo_home_mt"
+        android:fontFamily="@font/afacad_bold"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sub_heading_size"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="@dimen/logo_home_size"
+        android:layout_height="@dimen/logo_home_size"
+        android:layout_marginStart="@dimen/icom_home_ms"
+        android:layout_marginTop="@dimen/icon_home_mt"
+        android:src="@drawable/udhaar_logo"
+        app:layout_constraintLeft_toRightOf="@id/tvLogo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lender's Payment Number: "
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:id="@+id/tvLenderNumberBanner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLogo"
+        app:layout_constraintEnd_toStartOf="@id/lenderPhoneNumber"
+        />
+
+    <TextView
+        android:id="@+id/lenderPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number"
+        app:layout_constraintTop_toBottomOf="@id/tvLogo"
+        app:layout_constraintStart_toEndOf="@id/tvLenderNumberBanner"
+        android:textColor="@color/gold"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+    <Button
+        android:id="@+id/uploadScreenshotButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lenderPhoneNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/gold"
+        android:textColor="@color/black"
+        android:text="Upload Screenshot" />
+
+    <ProgressBar
+        android:id="@+id/uploadProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:layout_constraintTop_toBottomOf="@id/uploadScreenshotButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

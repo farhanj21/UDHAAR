@@ -1,0 +1,221 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    tools:context=".home_screen">
+
+    <!-- Existing elements -->
+    <TextView
+        android:id="@+id/tvLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/logo_home_ms"
+        android:layout_marginTop="@dimen/logo_home_mt"
+        android:fontFamily="@font/afacad_bold"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sub_heading_size"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="@dimen/logo_home_size"
+        android:layout_height="@dimen/logo_home_size"
+        android:layout_marginStart="@dimen/icom_home_ms"
+        android:layout_marginTop="@dimen/icon_home_mt"
+        android:src="@drawable/udhaar_logo"
+        app:layout_constraintLeft_toRightOf="@id/tvLogo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/homeButtonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="@dimen/home_margin_horizontal"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/home_btn_horizontal_padding"
+        app:layout_constraintBottom_toTopOf="@id/searchView"
+        app:layout_constraintTop_toBottomOf="@id/tvRec">
+
+        <Button
+            android:id="@+id/btnLent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:backgroundTint="@color/gold"
+            android:text="@string/btn_lent_text"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btnBorrowed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:backgroundTint="@color/gold"
+            android:text="@string/btn_borrowed_text"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvRec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+
+        android:text="Your Records"
+        android:textColor="@color/white"
+        android:textSize="@dimen/home_heading"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLogo" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        style="@style/CustomSearchView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginHorizontal="@dimen/home_margin_horizontal"
+        android:background="@drawable/rounded_searchview_background"
+        android:queryHint="Search by username..."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homeButtonsLayout" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/tableheader"
+        android:layout_marginHorizontal="@dimen/home_margin_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/searchView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/rounded_background"
+        android:layout_marginTop="15dp"
+        android:padding="5dp"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Borrower"
+            android:textColor="@color/black"
+            android:paddingHorizontal="15dp"
+            android:paddingTop="4dp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:paddingHorizontal="15dp"
+            android:text="Lender "
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingHorizontal="15dp"
+            android:text="Amount"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingHorizontal="15dp"
+            android:textColor="@color/black"
+            android:text="Date"
+            android:textStyle="bold"
+            android:gravity="center_horizontal" />
+
+    </LinearLayout>
+
+    <!-- RecyclerView to display records -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recordsRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/home_margin_horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tableheader" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnStartAddNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="90dp"
+        android:backgroundTint="@color/gold"
+        android:contentDescription="add new btn"
+        android:src="@drawable/add_new"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Get Started By Adding New Records!"
+        app:layout_constraintTop_toBottomOf="@id/tableheader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/empty_list_notification_margin_top"
+        android:textStyle="bold"
+        android:textColor="@android:color/darker_gray"
+        android:id="@+id/tvEmptyListNotification"
+        android:textSize="@dimen/empty_list_notification"
+        />
+
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/logo_home_mt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/gray"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/black"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

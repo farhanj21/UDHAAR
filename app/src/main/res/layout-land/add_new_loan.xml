@@ -1,0 +1,149 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Add New Record"
+        android:textColor="@color/white"
+        android:textSize="@dimen/home_heading"
+        android:textStyle="bold"
+        >
+
+    </TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dialog_margin_horizontal"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopStart="@dimen/field_radius"
+        app:boxCornerRadiusTopEnd="@dimen/field_radius"
+        app:boxCornerRadiusBottomStart="@dimen/field_radius"
+        app:boxCornerRadiusBottomEnd="@dimen/field_radius"
+        android:layout_marginTop="@dimen/dialog_field_margin_top"
+        android:hint="Enter Borrower Name"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/etBorrowerName"
+            >
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dialog_margin_horizontal"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopStart="@dimen/field_radius"
+        app:boxCornerRadiusTopEnd="@dimen/field_radius"
+        app:boxCornerRadiusBottomStart="@dimen/field_radius"
+        app:boxCornerRadiusBottomEnd="@dimen/field_radius"
+        android:layout_marginTop="@dimen/dialog_field_margin_top"
+        android:hint="Enter Lender Name"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/etLenderName"
+            >
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dialog_margin_horizontal"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopStart="@dimen/field_radius"
+        app:boxCornerRadiusTopEnd="@dimen/field_radius"
+        app:boxCornerRadiusBottomStart="@dimen/field_radius"
+        app:boxCornerRadiusBottomEnd="@dimen/field_radius"
+        android:layout_marginTop="@dimen/dialog_field_margin_top"
+        android:hint="Enter Amount"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:id="@+id/etAmount"
+            >
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dialog_margin_horizontal"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopStart="@dimen/field_radius"
+        app:boxCornerRadiusTopEnd="@dimen/field_radius"
+        app:boxCornerRadiusBottomStart="@dimen/field_radius"
+        app:boxCornerRadiusBottomEnd="@dimen/field_radius"
+        android:layout_marginTop="@dimen/dialog_field_margin_top"
+        android:hint="Enter Date"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="false"
+            android:inputType="none"
+            android:id="@+id/etDate"
+            >
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAdd"
+        android:layout_marginHorizontal="@dimen/dialog_margin_horizontal"
+        android:layout_marginTop="@dimen/dialog_button_margin_top"
+        android:text="Add"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="@dimen/dialog_button_text_size"
+        android:backgroundTint="@color/gold"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCancel"
+        android:layout_marginHorizontal="@dimen/dialog_margin_horizontal"
+        android:layout_marginTop="@dimen/dialog_button_margin_top"
+        android:text="Cancel"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="@dimen/dialog_button_text_size"
+        android:backgroundTint="@color/gray"
+        />
+
+
+</LinearLayout>
+
+</ScrollView>

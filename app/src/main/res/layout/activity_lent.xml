@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".Lent">
+
+    <!-- Existing elements -->
+    <TextView
+        android:id="@+id/tvLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/logo_home_ms"
+        android:layout_marginTop="@dimen/logo_home_mt"
+        android:fontFamily="@font/afacad_bold"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sub_heading_size"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="@dimen/logo_home_size"
+        android:layout_height="@dimen/logo_home_size"
+        android:layout_marginStart="@dimen/icom_home_ms"
+        android:layout_marginTop="@dimen/icon_home_mt"
+        android:src="@drawable/udhaar_logo"
+        app:layout_constraintLeft_toRightOf="@id/tvLogo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvRec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+
+        android:text="Lent Records"
+        android:textColor="@color/white"
+        android:textSize="@dimen/home_heading"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLogo" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        style="@style/CustomSearchView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/home_margin_horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_searchview_background"
+        android:queryHint="Search by username..."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvRec" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/tableheader"
+        android:layout_marginHorizontal="@dimen/home_margin_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/searchView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_background"
+        android:padding="5dp"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Borrower"
+            android:paddingTop="4dp"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:paddingHorizontal="@dimen/table_heading_horizontal_padding"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+
+<!--        <TextView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Lender"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textStyle="bold"-->
+<!--            />-->
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Amount"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Date"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Action"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Oops! This List is Currently Empty"
+        app:layout_constraintTop_toBottomOf="@id/tableheader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/empty_list_notification_margin_top"
+        android:textStyle="bold"
+        android:textColor="@android:color/darker_gray"
+        android:id="@+id/tvEmptyListNotification"
+        android:textSize="@dimen/empty_list_notification"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recordsRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginHorizontal="@dimen/home_margin_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tableheader" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">UDHAAR</string>
+    <string name="btn_lent_text">Lent</string>
+    <string name="btn_borrowed_text">Borrowed</string>
+</resources>
